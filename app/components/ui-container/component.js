@@ -1,0 +1,1 @@
+export { default } from 'm-components/components/ui-container/component';

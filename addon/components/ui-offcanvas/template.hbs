@@ -1,0 +1,6 @@
+
+<div class="offcanvas__content {{if small "offcanvas__content--small"}}">
+	{{yield (hash header=(component 'ui-container' extraClass="offcanvas__header"))}}
+	{{yield (hash body=(component 'ui-container' extraClass="offcanvas__body"))}}
+	{{yield (hash footer=(component 'ui-container' extraClass="offcanvas__footer"))}}
+</div>

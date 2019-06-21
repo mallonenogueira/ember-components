@@ -1,0 +1,22 @@
+<ul class="tabs__items">
+  {{#each tabs.items as |tab|}}
+    {{#if tab.visible}}
+      <UiTabs::item
+        @current={{tabs.currentTab}}
+        @tab={{tab}}
+        @onClick={{action "showTab" tab}}
+      />
+    {{/if}}
+  {{/each}}
+</ul>
+
+<div class="tabs__content">
+  {{#if tabs.currentTab.tabs}}
+    <Ui-tabs
+      @vertical={{unless vertical true}}
+      @tabs={{tabs.currentTab.tabs}}
+    />
+  {{else}}
+    {{outlet outlet}}
+  {{/if}}
+</div>
